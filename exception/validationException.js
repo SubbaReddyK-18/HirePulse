@@ -96,8 +96,12 @@ export function validateApplication(data) {
     fieldErrors.user = "You must be logged in as a candidate to apply.";
   }
 
-  if (!data.resume || data.resume.trim().length < 30) {
-    fieldErrors.resume = "Add a resume summary of at least 30 characters.";
+  if (!data.resumeData || !data.resumeFileName) {
+    fieldErrors.resumeFile = "Please upload your resume in PDF format.";
+  } else if (!data.resumeFileName.toLowerCase().endsWith(".pdf")) {
+    fieldErrors.resumeFile = "Only PDF format (.pdf) is supported.";
+  } else if (data.resumeFileSize && data.resumeFileSize > 10 * 1024 * 1024) {
+    fieldErrors.resumeFile = "File size exceeds 10MB limit. Please upload a smaller PDF.";
   }
 
   if (Object.keys(fieldErrors).length) {

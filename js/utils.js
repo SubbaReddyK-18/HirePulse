@@ -10,7 +10,6 @@ export const APPLICATION_STATUSES = [
 export const EXPERIENCE_OPTIONS = [
   "0-1 years",
   "1-3 years",
-  "2-4 years",
   "3-5 years",
   "5+ years"
 ];

@@ -1,4 +1,4 @@
-const STORAGE_KEY = "jobnest_session";
+const STORAGE_KEY = "hirepulse_session";
 
 export function getCurrentUser() {
   const raw = localStorage.getItem(STORAGE_KEY);

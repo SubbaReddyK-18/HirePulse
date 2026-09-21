@@ -263,6 +263,76 @@ label {
   padding: 18px;
 }
 
+.detail-card .skill-row {
+  margin-bottom: 28px;
+}
+
+.detail-card h2 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.detail-card .description {
+  line-height: 1.7;
+}
+
+.file-upload-box {
+  border: 2px dashed var(--line);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  background: #fbfcfe;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  margin: 10px 0;
+}
+
+.file-upload-box:hover {
+  border-color: var(--teal);
+  background: #f0fdf4;
+}
+
+.file-upload-box input[type="file"] {
+  display: none;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #e8f6f4;
+  border: 1px solid #bfece5;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.file-info span {
+  font-weight: 600;
+  color: var(--teal-dark);
+}
+
+.btn-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-pdf:hover {
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
 .steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -48,165 +48,188 @@
       "email": "meera@finovate.in",
       "password": "recruiter123",
       "role": "recruiter"
-    },
-    {
-      "name": "Neha Kapoor",
-      "email": "neha.kapoor@test.com",
-      "password": "secret123",
-      "role": "candidate",
-      "id": "EN0GRgG"
-    },
-    {
-      "name": "dummy user",
-      "email": "dummy@gmail.com",
-      "password": "vfstr2024",
-      "role": "candidate",
-      "id": "bOjTm4OhIaE"
-    },
-    {
-      "name": "gani",
-      "email": "gani@gmail.com",
-      "password": "vfstr2024",
-      "role": "candidate",
-      "id": "CQ6uQSg3AZ8"
     }
   ],
   "jobs": [
     {
       "id": "1",
       "title": "Frontend Developer",
-      "company": "TechVerse",
+      "company": "TechVerse Solutions",
       "location": "Bengaluru",
-      "salary": 900000,
+      "salary": 950000,
       "experience": "1-3 years",
-      "skills": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React"
-      ],
-      "description": "Build responsive web interfaces, collaborate with designers, and ship clean UI features for our SaaS products. You will work closely with backend engineers and take ownership of reusable component patterns.",
-      "postedDate": "2026-09-12",
+      "skills": ["HTML", "CSS", "JavaScript", "React", "TypeScript"],
+      "description": "Design and build fast, interactive user interfaces for our enterprise cloud platform. You will translate wireframes into high-fidelity web components, optimize asset loading, collaborate closely with UX designers, and write unit tests.",
+      "postedDate": "2026-09-18",
       "recruiterId": "5"
     },
     {
       "id": "2",
       "title": "Java Backend Engineer",
-      "company": "TechVerse",
+      "company": "TechVerse Solutions",
       "location": "Hyderabad",
-      "salary": 1200000,
-      "experience": "2-4 years",
-      "skills": [
-        "Java",
-        "Spring Boot",
-        "SQL",
-        "REST APIs"
-      ],
-      "description": "Design and maintain REST APIs, write reliable services, and improve the performance of our core platform. Experience with relational databases and code reviews is expected.",
-      "postedDate": "2026-09-08",
+      "salary": 1250000,
+      "experience": "1-3 years",
+      "skills": ["Java", "Spring Boot", "Microservices", "PostgreSQL", "REST APIs"],
+      "description": "Architect scalable microservices handling high transaction throughput. Work with Kafka event streaming, optimize SQL queries, and implement robust authentication and rate limiting.",
+      "postedDate": "2026-09-17",
       "recruiterId": "5"
     },
     {
       "id": "3",
-      "title": "UI/UX Designer",
-      "company": "TechVerse",
+      "title": "UI/UX Product Designer",
+      "company": "TechVerse Solutions",
       "location": "Remote",
       "salary": 850000,
-      "experience": "0-1 years",
-      "skills": [
-        "Figma",
-        "Wireframing",
-        "Prototyping",
-        "User Research"
-      ],
-      "description": "Create user flows, high-fidelity mockups, and design systems for web and mobile products. You will run lightweight usability reviews with product and engineering teams.",
-      "postedDate": "2026-09-15",
+      "experience": "1-3 years",
+      "skills": ["Figma", "Wireframing", "Prototyping", "Design Systems", "User Research"],
+      "description": "Create intuitive user flows, clickable prototypes, and unified design components for desktop and mobile web. Conduct customer interviews and usability reviews to refine UX.",
+      "postedDate": "2026-09-16",
       "recruiterId": "5"
     },
     {
       "id": "4",
       "title": "Cloud Support Associate",
-      "company": "CloudCraft",
+      "company": "CloudCraft Systems",
       "location": "Pune",
       "salary": 700000,
       "experience": "0-1 years",
-      "skills": [
-        "AWS",
-        "Linux",
-        "Networking",
-        "Troubleshooting"
-      ],
-      "description": "Help customers deploy and operate cloud workloads. You will diagnose incidents, write runbooks, and grow into a well-rounded cloud engineer.",
-      "postedDate": "2026-09-10",
+      "skills": ["AWS", "Linux", "Networking", "Bash", "Troubleshooting"],
+      "description": "Diagnose customer infrastructure tickets, manage VPC networks, deploy cloud instances, and help scale server configurations in real-time.",
+      "postedDate": "2026-09-15",
       "recruiterId": "6"
     },
     {
       "id": "5",
-      "title": "DevOps Engineer",
-      "company": "CloudCraft",
+      "title": "DevOps & Infrastructure Engineer",
+      "company": "CloudCraft Systems",
       "location": "Bengaluru",
-      "salary": 1400000,
+      "salary": 1450000,
       "experience": "3-5 years",
-      "skills": [
-        "Docker",
-        "Kubernetes",
-        "CI/CD",
-        "Terraform"
-      ],
-      "description": "Own CI/CD pipelines, infrastructure as code, and production reliability. You will partner with development teams to make releases safer and faster.",
-      "postedDate": "2026-09-05",
+      "skills": ["Docker", "Kubernetes", "CI/CD", "Terraform", "AWS"],
+      "description": "Build automated release pipelines, manage Kubernetes clusters, enforce zero-downtime rolling updates, and maintain cloud security baselines.",
+      "postedDate": "2026-09-14",
       "recruiterId": "6"
     },
     {
       "id": "6",
       "title": "Data Analyst",
-      "company": "Finovate",
+      "company": "Finovate Analytics",
       "location": "Mumbai",
       "salary": 950000,
       "experience": "1-3 years",
-      "skills": [
-        "SQL",
-        "Excel",
-        "Power BI",
-        "Python"
-      ],
-      "description": "Turn product and finance data into clear dashboards and insights. You will work with stakeholders to define metrics and present weekly business reviews.",
+      "skills": ["SQL", "Python", "Power BI", "Excel", "Data Modeling"],
+      "description": "Analyze transaction patterns, build automated executive dashboards, define KPIs, and deliver actionable insights for fintech operations.",
       "postedDate": "2026-09-14",
       "recruiterId": "7"
     },
     {
       "id": "7",
-      "title": "Full Stack Developer",
-      "company": "Finovate",
+      "title": "Full Stack Developer (MERN)",
+      "company": "Finovate Analytics",
       "location": "Chennai",
-      "salary": 1100000,
-      "experience": "2-4 years",
-      "skills": [
-        "JavaScript",
-        "Node.js",
-        "MongoDB",
-        "HTML"
-      ],
-      "description": "Build customer-facing features across the stack. You will write APIs, craft clean UI, and participate in sprint planning with product managers.",
-      "postedDate": "2026-09-01",
+      "salary": 1150000,
+      "experience": "1-3 years",
+      "skills": ["React", "Node.js", "Express", "MongoDB", "JavaScript"],
+      "description": "Own end-to-end full stack features from MongoDB schemas and Express routes to React component state and client-side caching.",
+      "postedDate": "2026-09-13",
       "recruiterId": "7"
     },
     {
       "id": "8",
-      "title": "QA Engineer",
-      "company": "CloudCraft",
+      "title": "QA Automation Engineer",
+      "company": "CloudCraft Systems",
       "location": "Hyderabad",
-      "salary": 800000,
+      "salary": 850000,
       "experience": "1-3 years",
-      "skills": [
-        "Manual Testing",
-        "Selenium",
-        "API Testing",
-        "JIRA"
-      ],
-      "description": "Plan test cycles, automate high-value scenarios, and keep quality visible to the team. Strong communication and bug reporting skills are essential.",
-      "postedDate": "2026-08-28",
+      "skills": ["Selenium", "Playwright", "Cypress", "API Testing", "Postman"],
+      "description": "Write automated end-to-end UI regression suites and REST API tests, integrating them into GitHub Actions CI pipelines.",
+      "postedDate": "2026-09-12",
       "recruiterId": "6"
+    },
+    {
+      "id": "9",
+      "title": "Machine Learning Engineer",
+      "company": "TechVerse Solutions",
+      "location": "Bengaluru",
+      "salary": 1600000,
+      "experience": "3-5 years",
+      "skills": ["Python", "PyTorch", "NLP", "Scikit-Learn", "FastAPI"],
+      "description": "Develop and deploy machine learning models, fine-tune transformer models for text extraction, and containerize inference pipelines.",
+      "postedDate": "2026-09-11",
+      "recruiterId": "5"
+    },
+    {
+      "id": "10",
+      "title": "iOS & Android App Developer",
+      "company": "Finovate Analytics",
+      "location": "Remote",
+      "salary": 1200000,
+      "experience": "3-5 years",
+      "skills": ["React Native", "Flutter", "TypeScript", "Redux", "Mobile UI"],
+      "description": "Develop high-performance cross-platform mobile apps, handle offline caching, integrate biometrics, and publish to App Store and Play Store.",
+      "postedDate": "2026-09-10",
+      "recruiterId": "7"
+    },
+    {
+      "id": "11",
+      "title": "Associate Software Engineer",
+      "company": "TechVerse Solutions",
+      "location": "Hyderabad",
+      "salary": 650000,
+      "experience": "0-1 years",
+      "skills": ["JavaScript", "HTML5", "CSS3", "Git", "OOP"],
+      "description": "Great opportunity for freshers to kickstart software engineering careers. Work with mentors to write modular code, fix bugs, and learn agile workflows.",
+      "postedDate": "2026-09-09",
+      "recruiterId": "5"
+    },
+    {
+      "id": "12",
+      "title": "Cybersecurity Analyst",
+      "company": "CloudCraft Systems",
+      "location": "Delhi NCR",
+      "salary": 1300000,
+      "experience": "3-5 years",
+      "skills": ["SOC", "SIEM", "Penetration Testing", "OWASP", "Network Security"],
+      "description": "Monitor system vulnerabilities, perform penetration tests, conduct incident responses, and enforce compliance with security standards.",
+      "postedDate": "2026-09-08",
+      "recruiterId": "6"
+    },
+    {
+      "id": "13",
+      "title": "Product Marketing Specialist",
+      "company": "Finovate Analytics",
+      "location": "Mumbai",
+      "salary": 900000,
+      "experience": "1-3 years",
+      "skills": ["SEO", "Content Strategy", "Google Analytics", "Email Campaigns"],
+      "description": "Drive user acquisition, lead product launch campaigns, produce technical case studies, and optimize conversion funnels.",
+      "postedDate": "2026-09-07",
+      "recruiterId": "7"
+    },
+    {
+      "id": "14",
+      "title": "Site Reliability Engineer (SRE)",
+      "company": "CloudCraft Systems",
+      "location": "Remote",
+      "salary": 1500000,
+      "experience": "3-5 years",
+      "skills": ["Prometheus", "Grafana", "Kubernetes", "Golang", "Incident Management"],
+      "description": "Ensure high availability and reliability of distributed platforms, set up SLO/SLA monitoring, and automate incident remediation.",
+      "postedDate": "2026-09-06",
+      "recruiterId": "6"
+    },
+    {
+      "id": "15",
+      "title": "Junior Python Developer",
+      "company": "TechVerse Solutions",
+      "location": "Bengaluru",
+      "salary": 720000,
+      "experience": "0-1 years",
+      "skills": ["Python", "Django", "PostgreSQL", "REST APIs", "Git"],
+      "description": "Build backend APIs using Django REST framework, write database migrations, and collaborate on microservice features.",
+      "postedDate": "2026-09-05",
+      "recruiterId": "5"
     }
   ],
   "applications": [
@@ -214,74 +237,40 @@
       "id": "1",
       "jobId": "1",
       "userId": "1",
-      "resume": "Priya Sharma — B.Tech CSE. Built campus portal UIs with HTML, CSS and JavaScript. Comfortable with Axios, Git, and responsive layouts. Seeking a frontend role.",
+      "candidateName": "Priya Sharma",
+      "candidateEmail": "priya.sharma@gmail.com",
+      "resumeFileName": "Priya_Sharma_Frontend_Resume.pdf",
+      "resumeFileSize": 245000,
+      "resumeData": "data:application/pdf;base64,JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMiAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9LaWRzIFszIDAgUl0KL0NvdW50IDEKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL1R5cGUgL1BhZ2UKL1BhcmVudCAyIDAgUgovTWVkaWFCb3ggWzAgMCA2MTIgNzkyXQovQ29udGVudHMgNCAwIFIKPj4KZW5kb2JqCjQgMCBvYmoKPDwKL0xlbmd0aCA2NQo+PgpzdHJlYW0KQlQKL0YxIDI0IFRmCjEwMCA3MDAgVGROCihQcml5YSBTaGFybWEgLSBGcm9udGVuZCBSZXN1bWUpIFRqCkVUCmVuZHN0cmVhbQplbmRvYmoKeHJlZgowIDUKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDAwNjggMDAwMDAgbiAKMDAwMDAwMDEyNSAwMDAwMCBuIAowMDAwMDAwMjE2IDAwMDAwIG4gCnRyYWlsZXIKPDwKL1NpemUgNQovUm9vdCAxIDAgUgo+PgpzdGFydHhyZWYKMzMwCiUlRU9G",
+      "coverNote": "Passionate about building performant React interfaces with 2 years of hands-on experience.",
       "status": "Interview",
-      "appliedDate": "2026-09-13"
+      "appliedDate": "2026-09-19"
     },
     {
       "id": "2",
       "jobId": "2",
-      "userId": "1",
-      "resume": "Priya Sharma — Additional Java coursework and REST API labs. Interested in growing into a backend-capable frontend engineer.",
+      "userId": "2",
+      "candidateName": "Arjun Mehta",
+      "candidateEmail": "arjun.mehta@gmail.com",
+      "resumeFileName": "Arjun_Mehta_Backend_Resume.pdf",
+      "resumeFileSize": 310000,
+      "resumeData": "data:application/pdf;base64,JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMiAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9LaWRzIFszIDAgUl0KL0NvdW50IDEKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL1R5cGUgL1BhZ2UKL1BhcmVudCAyIDAgUgovTWVkaWFCb3ggWzAgMCA2MTIgNzkyXQovQ29udGVudHMgNCAwIFIKPj4KZW5kb2JqCjQgMCBvYmoKPDwKL0xlbmd0aCA2NQo+PgpzdHJlYW0KQlQKL0YxIDI0IFRmCjEwMCA3MDAgVGROCihBcmp1biBNZWh0YSAtIEJhY2tlbmQgUmVzdW1lKSBUagpFVAplbmRzdHJlYW0KZW5kb2JqCnhyZWYKMCA1CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwMDY4IDAwMDAwIG4gCjAwMDAwMDAxMjUgMDAwMDAgbiAKMDAwMDAwMDIxNiAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9TaXplIDUKL1Jvb3QgMSAwIFIKPj4Kc3RhcnR4cmVmCjMzMAolJUVPRg==",
+      "coverNote": "Experienced in Spring Boot, REST APIs, and microservices architecture.",
       "status": "Under Review",
-      "appliedDate": "2026-09-14"
+      "appliedDate": "2026-09-18"
     },
     {
       "id": "3",
-      "jobId": "4",
-      "userId": "2",
-      "resume": "Arjun Mehta — Fresh graduate with Linux and AWS fundamentals. Completed a cloud internship and troubleshooting labs. Looking for a support/engineering start.",
-      "status": "Shortlisted",
-      "appliedDate": "2026-09-11"
-    },
-    {
-      "id": "4",
       "jobId": "6",
-      "userId": "2",
-      "resume": "Arjun Mehta — Strong SQL and Excel. Built sales dashboards during internship. Interested in fintech analytics.",
-      "status": "Applied",
-      "appliedDate": "2026-09-16"
-    },
-    {
-      "id": "5",
-      "jobId": "7",
       "userId": "3",
-      "resume": "Kavya Reddy — MERN practice projects including auth, CRUD, and JSON Server apps. Comfortable with JavaScript DOM and REST APIs.",
+      "candidateName": "Kavya Reddy",
+      "candidateEmail": "kavya.reddy@gmail.com",
+      "resumeFileName": "Kavya_Reddy_Data_Resume.pdf",
+      "resumeFileSize": 280000,
+      "resumeData": "data:application/pdf;base64,JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMiAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9LaWRzIFszIDAgUl0KL0NvdW50IDEKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL1R5cGUgL1BhZ2UKL1BhcmVudCAyIDAgUgovTWVkaWFCb3ggWzAgMCA2MTIgNzkyXQovQ29udGVudHMgNCAwIFIKPj4KZW5kb2JqCjQgMCBvYmoKPDwKL0xlbmd0aCA2NQo+PgpzdHJlYW0KQlQKL0YxIDI0IFRmCjEwMCA3MDAgVGROCihLYXZ5YSBSZWRkeSAtIERhdGEgQW5hbHlzdCkgVGoKRVQKZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgNQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMDA2OCAwMDAwMCBuIAowMDAwMDAwMTI1IDAwMDAwIG4gCjAwMDAwMDAyMTYgMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSA1Ci9Sb290IDEgMCBSCj4+CnN0YXJ0eHJlZgozMzAKJSVFT0Y=",
+      "coverNote": "Strong background in SQL querying and Power BI dashboarding.",
       "status": "Selected",
-      "appliedDate": "2026-09-03"
-    },
-    {
-      "id": "6",
-      "jobId": "3",
-      "userId": "3",
-      "resume": "Kavya Reddy — Portfolio of Figma case studies for campus and e-commerce flows. Can hand off developer-ready screens.",
-      "status": "Rejected",
       "appliedDate": "2026-09-16"
-    },
-    {
-      "id": "7",
-      "jobId": "5",
-      "userId": "4",
-      "resume": "Rohan Iyer — 3 years of CI/CD and Docker. Built GitHub Actions pipelines and Kubernetes labs. Seeking a DevOps role in Bengaluru.",
-      "status": "Under Review",
-      "appliedDate": "2026-09-07"
-    },
-    {
-      "id": "8",
-      "jobId": "8",
-      "userId": "4",
-      "resume": "Rohan Iyer — Experience writing test cases, API tests, and regression suites. Open to QA plus automation growth.",
-      "status": "Applied",
-      "appliedDate": "2026-09-09"
-    },
-    {
-      "id": "9",
-      "jobId": "1",
-      "userId": "3",
-      "resume": "Kavya Reddy — Frontend-focused MERN trainee. Built reusable cards, forms, and dashboards. Applying for Frontend Developer at TechVerse.",
-      "status": "Shortlisted",
-      "appliedDate": "2026-09-17"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }

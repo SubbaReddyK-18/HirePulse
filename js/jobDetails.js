@@ -89,13 +89,29 @@ function renderApplyPanel(job, user, existing) {
 
   panel.innerHTML = `
     <div class="card">
-      <h2>Apply now</h2>
+      <h2>Apply for this role</h2>
+      <p class="muted">Upload your updated resume to submit your application.</p>
       <div id="form-alert"></div>
       <form id="apply-form">
-        <label for="resume">Resume summary</label>
-        <textarea id="resume" name="resume" rows="7" placeholder="Write a short resume summary and why you are a fit."></textarea>
-        <p class="field-error" data-error-for="resume"></p>
-        <button class="btn btn-primary" id="apply-submit" type="submit">Submit application</button>
+        <label>Resume (PDF only, max 10MB)</label>
+        <div class="file-upload-box" id="upload-zone">
+          <input type="file" id="resume-file" name="resumeFile" accept=".pdf,application/pdf">
+          <p id="upload-prompt" style="margin: 0;"><strong>Click or drag &amp; drop your resume (PDF)</strong><br><span class="muted" style="font-size: 0.82rem;">Maximum file size: 10MB</span></p>
+        </div>
+        <div id="file-selected-info" class="file-info" style="display: none;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+          </svg>
+          <span id="selected-filename">resume.pdf</span>
+          <small id="selected-filesize" class="muted" style="margin-left: auto;"></small>
+        </div>
+        <p class="field-error" data-error-for="resumeFile"></p>
+
+        <label for="cover-note">Cover Note / Remarks (Optional)</label>
+        <textarea id="cover-note" name="coverNote" rows="3" placeholder="Brief note to the hiring team..."></textarea>
+
+        <button class="btn btn-primary" id="apply-submit" type="submit" style="width: 100%; margin-top: 10px;">Submit Application</button>
       </form>
     </div>
   `;
@@ -103,6 +119,46 @@ function renderApplyPanel(job, user, existing) {
   const form = document.getElementById("apply-form");
   const alertBox = document.getElementById("form-alert");
   const submitBtn = document.getElementById("apply-submit");
+  const fileInput = document.getElementById("resume-file");
+  const uploadZone = document.getElementById("upload-zone");
+  const fileInfo = document.getElementById("file-selected-info");
+  const fileNameEl = document.getElementById("selected-filename");
+  const fileSizeEl = document.getElementById("selected-filesize");
+
+  let selectedPdfData = null;
+  let selectedPdfName = "";
+  let selectedPdfSize = 0;
+
+  uploadZone.addEventListener("click", () => fileInput.click());
+
+  fileInput.addEventListener("change", () => {
+    const file = fileInput.files[0];
+    if (!file) return;
+
+    if (!file.name.toLowerCase().endsWith(".pdf")) {
+      window.alert("Please select a valid PDF file.");
+      fileInput.value = "";
+      return;
+    }
+
+    if (file.size > 10 * 1024 * 1024) {
+      window.alert("File size exceeds 10MB limit. Please upload a smaller file.");
+      fileInput.value = "";
+      return;
+    }
+
+    selectedPdfName = file.name;
+    selectedPdfSize = file.size;
+    fileNameEl.textContent = file.name;
+    fileSizeEl.textContent = (file.size / (1024 * 1024)).toFixed(2) + " MB";
+    fileInfo.style.display = "flex";
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      selectedPdfData = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  });
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -112,14 +168,19 @@ function renderApplyPanel(job, user, existing) {
     const payload = {
       jobId: job.id,
       userId: user.id,
-      resume: form.resume.value.trim(),
+      candidateName: user.name,
+      candidateEmail: user.email,
+      resumeFileName: selectedPdfName,
+      resumeFileSize: selectedPdfSize,
+      resumeData: selectedPdfData,
+      coverNote: form.coverNote ? form.coverNote.value.trim() : "",
       status: "Applied",
       appliedDate: todayIsoDate()
     };
 
     try {
       validateApplication(payload);
-      setBusy(submitBtn, true, "Submitting...");
+      setBusy(submitBtn, true, "Submitting application...");
       const duplicates = await getApplicationsByUserAndJob(user.id, job.id);
       assertDuplicateApplication(duplicates);
       await createApplication(payload);

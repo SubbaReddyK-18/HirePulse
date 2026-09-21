@@ -34,6 +34,20 @@ async function renderApplicants(job) {
         candidateName = "Candidate record unavailable";
       }
 
+      const resumeButton = application.resumeData
+        ? `<a class="btn-pdf" href="${application.resumeData}" target="_blank" download="${escapeHtml(application.resumeFileName || 'resume.pdf')}">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+            Download PDF Resume (${escapeHtml(application.resumeFileName || 'resume.pdf')})
+          </a>`
+        : `<p class="resume-preview">${escapeHtml(application.resume || "No PDF uploaded")}</p>`;
+
+      const coverNoteHtml = application.coverNote
+        ? `<p class="muted" style="margin-top: 8px;"><strong>Note:</strong> ${escapeHtml(application.coverNote)}</p>`
+        : "";
+
       return `
         <article class="card application-card">
           <div class="job-card-top">
@@ -43,14 +57,17 @@ async function renderApplicants(job) {
             </div>
             <span class="badge badge-${statusClass(application.status)}">${escapeHtml(application.status)}</span>
           </div>
-          <p class="muted">Applied ${escapeHtml(formatDate(application.appliedDate))}</p>
-          <p class="resume-preview">${escapeHtml(application.resume)}</p>
-          <label for="status-${escapeHtml(application.id)}">Update status</label>
+          <p class="muted">Applied on ${escapeHtml(formatDate(application.appliedDate))}</p>
+          <div style="margin: 12px 0;">
+            ${resumeButton}
+            ${coverNoteHtml}
+          </div>
+          <label for="status-${escapeHtml(application.id)}">Update Application Status</label>
           <div class="action-row">
             <select id="status-${escapeHtml(application.id)}" data-status-for="${escapeHtml(application.id)}">
               ${statusOptions(application.status)}
             </select>
-            <button class="btn btn-primary" type="button" data-save-status="${escapeHtml(application.id)}">Save status</button>
+            <button class="btn btn-primary" type="button" data-save-status="${escapeHtml(application.id)}">Save Status</button>
           </div>
         </article>
       `;

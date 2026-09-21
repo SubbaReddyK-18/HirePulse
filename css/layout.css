@@ -86,9 +86,49 @@ main {
   gap: 18px;
 }
 
-.nav-links a,
-.nav-user {
+.nav-links a {
   color: #d7e4f2;
+}
+
+.nav-user {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 5px 12px 5px 8px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.nav-avatar {
+  width: 26px;
+  height: 26px;
+  background: var(--teal);
+  color: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(15, 138, 125, 0.4);
+}
+
+.nav-user-name {
+  color: #ffffff;
+}
+
+.nav-user-role {
+  background: rgba(15, 138, 125, 0.35);
+  color: #a7f3d0;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-weight: 700;
 }
 
 .nav-links a.active {

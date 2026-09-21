@@ -80,7 +80,7 @@
   }
 
   // js/auth.js
-  var STORAGE_KEY = "jobnest_session";
+  var STORAGE_KEY = "hirepulse_session";
   function getCurrentUser() {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) {
@@ -138,16 +138,26 @@
     const user = getCurrentUser();
     const currentPage = document.body.dataset.page || "";
     const authAction = user ? `<button class="btn btn-ghost" id="logout-btn" type="button">Logout</button>` : `<a class="btn btn-primary" href="./login.html">Sign in</a>`;
+    const userBadge = user ? `<div class="nav-user">
+        <span class="nav-avatar">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </span>
+        <span class="nav-user-name">${user.name}</span>
+        <span class="nav-user-role">${user.role === "recruiter" ? "Recruiter" : "Candidate"}</span>
+      </div>` : "";
     header.innerHTML = `
     <div class="nav-bar">
       <a class="brand" href="./index.html">
         <img src="../assets/logo.svg" alt="" width="32" height="32">
-        <span>JobNest</span>
+        <span>HirePulse</span>
       </a>
       <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation">Menu</button>
       <nav class="nav-links" id="nav-links">
         ${buildNavLinks(user, currentPage)}
-        ${user ? `<span class="nav-user">${user.name}</span>` : ""}
+        ${userBadge}
         ${authAction}
       </nav>
     </div>
@@ -167,7 +177,7 @@
       return;
     }
     footer.innerHTML = `
-    <p>JobNest is a student job portal built with HTML, CSS, JavaScript, Axios and JSON Server.</p>
+    <p>&copy; 2026 HirePulse &middot; Advanced Career &amp; Recruitment Management Portal.</p>
   `;
   }
   function guardPageAccess() {
@@ -337,6 +347,14 @@
         } catch (error) {
           candidateName = "Candidate record unavailable";
         }
+        const resumeButton = application.resumeData ? `<a class="btn-pdf" href="${application.resumeData}" target="_blank" download="${escapeHtml(application.resumeFileName || "resume.pdf")}">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+            </svg>
+            Download PDF Resume (${escapeHtml(application.resumeFileName || "resume.pdf")})
+          </a>` : `<p class="resume-preview">${escapeHtml(application.resume || "No PDF uploaded")}</p>`;
+        const coverNoteHtml = application.coverNote ? `<p class="muted" style="margin-top: 8px;"><strong>Note:</strong> ${escapeHtml(application.coverNote)}</p>` : "";
         return `
         <article class="card application-card">
           <div class="job-card-top">
@@ -346,14 +364,17 @@
             </div>
             <span class="badge badge-${statusClass(application.status)}">${escapeHtml(application.status)}</span>
           </div>
-          <p class="muted">Applied ${escapeHtml(formatDate(application.appliedDate))}</p>
-          <p class="resume-preview">${escapeHtml(application.resume)}</p>
-          <label for="status-${escapeHtml(application.id)}">Update status</label>
+          <p class="muted">Applied on ${escapeHtml(formatDate(application.appliedDate))}</p>
+          <div style="margin: 12px 0;">
+            ${resumeButton}
+            ${coverNoteHtml}
+          </div>
+          <label for="status-${escapeHtml(application.id)}">Update Application Status</label>
           <div class="action-row">
             <select id="status-${escapeHtml(application.id)}" data-status-for="${escapeHtml(application.id)}">
               ${statusOptions(application.status)}
             </select>
-            <button class="btn btn-primary" type="button" data-save-status="${escapeHtml(application.id)}">Save status</button>
+            <button class="btn btn-primary" type="button" data-save-status="${escapeHtml(application.id)}">Save Status</button>
           </div>
         </article>
       `;

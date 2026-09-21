@@ -1,6 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="JobNest">
-  <rect width="64" height="64" rx="16" fill="#0f8a7d"/>
-  <path d="M18 28h28v18a4 4 0 0 1-4 4H22a4 4 0 0 1-4-4V28z" fill="#fff"/>
-  <path d="M24 28v-4a8 8 0 0 1 16 0v4" fill="none" stroke="#fff" stroke-width="4"/>
-  <circle cx="32" cy="38" r="3" fill="#10243e"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="HirePulse">
+  <defs>
+    <!-- Mask for the pulse wave in negative space -->
+    <mask id="pulse-cutout">
+      <!-- White reveals everything -->
+      <rect width="100" height="100" fill="#ffffff" rx="20"/>
+      <!-- Black stroke cuts out the pulse wave -->
+      <path d="M 0 50 L 32 50 L 38 42 L 44 58 L 50 32 L 56 68 L 62 45 L 68 50 L 100 50" 
+            fill="none" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </mask>
+  </defs>
+
+  <!-- Background rounded container -->
+  <rect width="100" height="100" rx="22" fill="#0f172a" />
+
+  <!-- Monogram HP Group with negative space pulse wave -->
+  <g mask="url(#pulse-cutout)">
+    <!-- Letter 'H' (Royal Blue) -->
+    <!-- Left vertical bar -->
+    <rect x="18" y="20" width="13" height="60" rx="3" fill="#2563EB"/>
+    <!-- Right vertical bar of H -->
+    <rect x="43" y="20" width="13" height="60" rx="3" fill="#2563EB"/>
+    <!-- Horizontal Crossbar of H -->
+    <rect x="18" y="44" width="38" height="12" fill="#2563EB"/>
+
+    <!-- Letter 'P' (Energetic Orange) sharing the right vertical stem & extending to top right loop -->
+    <!-- P Stem -->
+    <rect x="52" y="20" width="13" height="60" rx="3" fill="#F97316"/>
+    <!-- P Loop Top & Curve -->
+    <path d="M 52 20 L 70 20 C 82 20, 84 32, 84 38 C 84 46, 80 56, 68 56 L 52 56 Z" fill="#F97316"/>
+    <!-- P Inner Loop Hole -->
+    <path d="M 64 31 L 70 31 C 74 31, 74 37, 74 38 C 74 41, 74 45, 68 45 L 64 45 Z" fill="#0f172a"/>
+  </g>
+
+  <!-- Glowing pulse line accent overlaid -->
+  <path d="M 12 50 L 32 50 L 38 42 L 44 58 L 50 32 L 56 68 L 62 45 L 68 50 L 88 50" 
+        fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

@@ -64,7 +64,7 @@
   }
 
   // js/auth.js
-  var STORAGE_KEY = "jobnest_session";
+  var STORAGE_KEY = "hirepulse_session";
   function getCurrentUser() {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) {
@@ -122,16 +122,26 @@
     const user = getCurrentUser();
     const currentPage = document.body.dataset.page || "";
     const authAction = user ? `<button class="btn btn-ghost" id="logout-btn" type="button">Logout</button>` : `<a class="btn btn-primary" href="./login.html">Sign in</a>`;
+    const userBadge = user ? `<div class="nav-user">
+        <span class="nav-avatar">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </span>
+        <span class="nav-user-name">${user.name}</span>
+        <span class="nav-user-role">${user.role === "recruiter" ? "Recruiter" : "Candidate"}</span>
+      </div>` : "";
     header.innerHTML = `
     <div class="nav-bar">
       <a class="brand" href="./index.html">
         <img src="../assets/logo.svg" alt="" width="32" height="32">
-        <span>JobNest</span>
+        <span>HirePulse</span>
       </a>
       <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation">Menu</button>
       <nav class="nav-links" id="nav-links">
         ${buildNavLinks(user, currentPage)}
-        ${user ? `<span class="nav-user">${user.name}</span>` : ""}
+        ${userBadge}
         ${authAction}
       </nav>
     </div>
@@ -151,7 +161,7 @@
       return;
     }
     footer.innerHTML = `
-    <p>JobNest is a student job portal built with HTML, CSS, JavaScript, Axios and JSON Server.</p>
+    <p>&copy; 2026 HirePulse &middot; Advanced Career &amp; Recruitment Management Portal.</p>
   `;
   }
   function guardPageAccess() {
