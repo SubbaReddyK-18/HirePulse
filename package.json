@@ -1,0 +1,20 @@
+{
+  "name": "jobnest-portal",
+  "version": "1.0.0",
+  "description": "JobNest - Career & Job Recruitment Portal",
+  "main": "index.html",
+  "scripts": {
+    "server": "npx json-server db.json --port 3000",
+    "client": "npx serve . -p 5500",
+    "start": "start http://localhost:5500/views/index.html && npx json-server db.json --port 3000"
+  },
+  "keywords": [
+    "job-portal",
+    "mern",
+    "javascript",
+    "axios",
+    "json-server"
+  ],
+  "author": "JobNest Team",
+  "license": "ISC"
+}

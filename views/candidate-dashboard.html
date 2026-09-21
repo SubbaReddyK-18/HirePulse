@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidate dashboard | JobNest</title>
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="icon" href="../assets/logo.svg">
+</head>
+<body data-page="candidate-dashboard" data-access="candidate">
+  <header id="site-header"></header>
+  <main>
+    <section class="dash-hero">
+      <div>
+        <p class="eyebrow">Candidate</p>
+        <h1>Hello, <span id="welcome-name">there</span></h1>
+        <p class="muted">Track applications, statuses and new roles from one place.</p>
+      </div>
+      <div class="quick-actions">
+        <a class="btn btn-primary" href="./jobs.html">Find jobs</a>
+        <a class="btn btn-secondary" href="./my-applications.html">My applications</a>
+      </div>
+    </section>
+    <section class="stats-grid">
+      <article class="stat-card">
+        <p>Applications</p>
+        <strong id="application-count">0</strong>
+      </article>
+      <article class="stat-card">
+        <p>Open jobs</p>
+        <strong id="open-jobs-count">0</strong>
+      </article>
+      <article class="stat-card">
+        <p>Next step</p>
+        <strong>Apply</strong>
+      </article>
+    </section>
+    <section>
+      <h2>Applications by status</h2>
+      <div id="status-stats" class="stats-grid"></div>
+    </section>
+    <section>
+      <div class="toolbar">
+        <h2>Recent applications</h2>
+        <a href="./my-applications.html">View all</a>
+      </div>
+      <div id="recent-applications"></div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="../js/dist/candidateDashboard.js"></script>
+</body>
+</html>

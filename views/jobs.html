@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs | JobNest</title>
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../assets/logo.svg">
+</head>
+<body data-page="jobs" data-access="public">
+  <header id="site-header"></header>
+  <main>
+    <section class="page-hero">
+      <h1>Browse open roles</h1>
+      <p>Search by title, company or skills. Filter by location and experience.</p>
+    </section>
+    <section class="filter-bar">
+      <div>
+        <label for="search-input">Search</label>
+        <input id="search-input" type="search" placeholder="Title, company or skills">
+      </div>
+      <div>
+        <label for="location-filter">Location</label>
+        <select id="location-filter">
+          <option value="">All locations</option>
+        </select>
+      </div>
+      <div>
+        <label for="experience-filter">Experience</label>
+        <select id="experience-filter">
+          <option value="">All experience</option>
+        </select>
+      </div>
+      <button class="btn btn-secondary" id="clear-filters" type="button">Clear</button>
+    </section>
+    <div class="toolbar">
+      <h2>Results</h2>
+      <p id="result-count" class="muted"></p>
+    </div>
+    <section id="jobs-list" class="jobs-grid"></section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="../js/dist/jobs.js"></script>
+</body>
+</html>

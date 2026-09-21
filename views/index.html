@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobNest | Find your next role</title>
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../assets/logo.svg">
+</head>
+<body data-page="index" data-access="public">
+  <header id="site-header"></header>
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Student job portal</p>
+        <h1>Find internships and full-time roles that match your skills.</h1>
+        <p>JobNest helps candidates discover openings and helps recruiters manage applications from one clean workspace.</p>
+        <div class="quick-actions">
+          <a class="btn btn-primary" href="./jobs.html">Browse jobs</a>
+          <a class="btn btn-secondary" href="./register.html">Create an account</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <p class="muted">Open roles on JobNest</p>
+        <h2 id="open-roles-count">—</h2>
+        <p>Search by title, company or skills. Filter by location and experience. Apply in a few minutes.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="toolbar">
+        <h2>Featured jobs</h2>
+        <a href="./jobs.html">See all jobs</a>
+      </div>
+      <div id="featured-jobs" class="jobs-grid"></div>
+    </section>
+
+    <section>
+      <h2>How it works</h2>
+      <div class="steps">
+        <article class="card">
+          <h3>1. Create a profile</h3>
+          <p>Register as a candidate or recruiter. Your session is stored in the browser for this student project.</p>
+        </article>
+        <article class="card">
+          <h3>2. Discover or post jobs</h3>
+          <p>Candidates browse live openings. Recruiters publish, edit and remove their own listings.</p>
+        </article>
+        <article class="card">
+          <h3>3. Track applications</h3>
+          <p>Follow status from Applied to Interview, Selected or Rejected.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="../js/dist/home.js"></script>
+</body>
+</html>
