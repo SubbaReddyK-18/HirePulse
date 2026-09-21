@@ -165,20 +165,26 @@ function renderApplyPanel(job, user, existing) {
     clearAlert(alertBox);
     clearFieldErrors(form);
 
-    const payload = {
-      jobId: job.id,
-      userId: user.id,
-      candidateName: user.name,
-      candidateEmail: user.email,
-      resumeFileName: selectedPdfName,
-      resumeFileSize: selectedPdfSize,
-      resumeData: selectedPdfData,
-      coverNote: form.coverNote ? form.coverNote.value.trim() : "",
-      status: "Applied",
-      appliedDate: todayIsoDate()
-    };
-
     try {
+      if (selectedPdfData) {
+        try {
+          localStorage.setItem(`hirepulse_resume_${user.id}_${job.id}`, selectedPdfData);
+        } catch (_) {}
+      }
+
+      const payload = {
+        jobId: job.id,
+        userId: user.id,
+        candidateName: user.name,
+        candidateEmail: user.email,
+        resumeFileName: selectedPdfName,
+        resumeFileSize: selectedPdfSize,
+        resumeData: "stored_locally",
+        coverNote: form.coverNote ? form.coverNote.value.trim() : "",
+        status: "Applied",
+        appliedDate: todayIsoDate()
+      };
+
       validateApplication(payload);
       setBusy(submitBtn, true, "Submitting application...");
       const duplicates = await getApplicationsByUserAndJob(user.id, job.id);

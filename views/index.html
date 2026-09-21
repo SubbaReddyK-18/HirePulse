@@ -13,10 +13,25 @@
   <main>
     <section class="hero">
       <div>
-        <p class="eyebrow">Smart Career &amp; Recruitment Portal</p>
-        <h1>Find internships and full-time roles that match your skills.</h1>
-        <p>HirePulse helps candidates discover openings and helps recruiters manage applications from one clean workspace.</p>
-        <div class="quick-actions">
+        <p class="eyebrow" id="hero-eyebrow">Smart Career &amp; Recruitment Portal</p>
+        <h1 id="hero-title">Find internships and full-time roles that match your skills.</h1>
+        <p id="hero-subtitle">HirePulse helps candidates discover openings and helps recruiters manage applications from one clean workspace.</p>
+        
+        <form class="hero-search-box" id="hero-search-form" action="./jobs.html" method="GET">
+          <input type="search" name="search" id="hero-search-input" placeholder="Search by title, skills, or company (e.g. React, Java, AWS)...">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+
+        <div class="category-row">
+          <a class="category-chip" href="./jobs.html?search=Frontend">Frontend</a>
+          <a class="category-chip" href="./jobs.html?search=Backend">Backend</a>
+          <a class="category-chip" href="./jobs.html?search=Full Stack">Full Stack</a>
+          <a class="category-chip" href="./jobs.html?search=DevOps">DevOps</a>
+          <a class="category-chip" href="./jobs.html?search=Cloud">Cloud</a>
+          <a class="category-chip" href="./jobs.html?search=Remote">Remote</a>
+        </div>
+
+        <div class="quick-actions" id="hero-actions" style="margin-top: 18px;">
           <a class="btn btn-primary" href="./jobs.html">Browse jobs</a>
           <a class="btn btn-secondary" href="./register.html">Create an account</a>
         </div>
@@ -24,10 +39,10 @@
       <div class="hero-panel">
         <p class="muted">Open roles on HirePulse</p>
         <h2 id="open-roles-count">—</h2>
-        <p>Search by title, company or skills. Filter by location and experience. Apply in a few minutes.</p>
+        <p>Verified openings across top tech teams. Filter by experience and location.</p>
       </div>
     </section>
-
+    <br>
     <section>
       <div class="toolbar">
         <h2>Featured jobs</h2>
@@ -35,21 +50,21 @@
       </div>
       <div id="featured-jobs" class="jobs-grid"></div>
     </section>
-
-    <section>
+    <br>
+    <section id="how-it-works-section">
       <h2>How it works</h2>
       <div class="steps">
         <article class="card">
           <h3>1. Create a profile</h3>
-          <p>Register as a candidate or recruiter. Your session is stored in the browser for this student project.</p>
+          <p>Register as a candidate or recruiter to access your dedicated workspace.</p>
         </article>
         <article class="card">
           <h3>2. Discover or post jobs</h3>
-          <p>Candidates browse live openings. Recruiters publish, edit and remove their own listings.</p>
+          <p>Candidates browse verified openings. Recruiters publish, edit and track listings.</p>
         </article>
         <article class="card">
           <h3>3. Track applications</h3>
-          <p>Follow status from Applied to Interview, Selected or Rejected.</p>
+          <p>Follow status in real time from Applied to Interview, Selected or Rejected.</p>
         </article>
       </div>
     </section>

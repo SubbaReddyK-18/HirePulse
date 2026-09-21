@@ -1,6 +1,6 @@
 import { getJobs } from "./service/jobService.js";
 import { initLayout } from "./main.js";
-import { escapeHtml, formatSalary, parseSkills, uniqueValues } from "./utils.js";
+import { escapeHtml, formatSalary, getQueryParam, parseSkills, uniqueValues, EXPERIENCE_OPTIONS } from "./utils.js";
 import { getUserFacingError, renderEmpty, renderError, renderLoading } from "./ui.js";
 
 let allJobs = [];
@@ -71,7 +71,7 @@ function fillFilterOptions(jobs) {
   });
 
   const experienceSelect = document.getElementById("experience-filter");
-  uniqueValues(jobs, "experience").forEach((experience) => {
+  EXPERIENCE_OPTIONS.forEach((experience) => {
     const option = document.createElement("option");
     option.value = experience;
     option.textContent = experience;
@@ -87,6 +87,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   try {
     allJobs = await getJobs();
     fillFilterOptions(allJobs);
+
+    const initialSearch = getQueryParam("search") || "";
+    if (initialSearch) {
+      document.getElementById("search-input").value = initialSearch;
+    }
+
     applyFilters();
   } catch (error) {
     renderError(list, getUserFacingError(error));

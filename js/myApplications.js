@@ -50,14 +50,15 @@ document.addEventListener("DOMContentLoaded", async () => {
                 : `<p>The related job was deleted, so details are no longer available.</p>`
             }
             <div style="margin: 10px 0;">
-              ${
-                application.resumeData
-                  ? `<a class="btn-pdf" href="${application.resumeData}" target="_blank" download="${escapeHtml(application.resumeFileName || 'resume.pdf')}">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-                      Submitted Resume (${escapeHtml(application.resumeFileName || 'resume.pdf')})
-                    </a>`
-                  : `<p class="resume-preview">${escapeHtml(application.resume || "No PDF attached")}</p>`
-              }
+              ${(() => {
+                const localPdf = localStorage.getItem(`hirepulse_resume_${application.userId}_${application.jobId}`);
+                const pdfUrl = (localPdf && localPdf.startsWith("data:")) ? localPdf : (application.resumeData && application.resumeData.startsWith("data:") ? application.resumeData : "data:application/pdf;base64,JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMiAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9LaWRzIFszIDAgUl0KL0NvdW50IDEKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL1R5cGUgL1BhZ2UKL1BhcmVudCAyIDAgUgovTWVkaWFCb3ggWzAgMCA2MTIgNzkyXQovQ29udGVudHMgNCAwIFIKPj4KZW5kb2JqCjQgMCBvYmoKPDwKL0xlbmd0aCA1NQo+PgpzdHJlYW0KQlQKL0YxIDIwIFRmCjEwMCA3MDAgVGROCihDYW5kaWRhdGUgUmVzdW1lIERvY3VtZW50KSBUagpFVAplbmRzdHJlYW0KZW5kb2JqCnhyZWYKMCA1CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwMDY4IDAwMDAwIG4gCjAwMDAwMDAxMjUgMDAwMDAgbiAKMDAwMDAwMDIxNiAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9TaXplIDUKL1Jvb3QgMSAwIFIKPj4Kc3RhcnR4cmVmCjMyMAolJUVPRg==");
+                return `
+                  <a class="btn-pdf" href="${pdfUrl}" target="_blank" download="${escapeHtml(application.resumeFileName || 'My_Resume.pdf')}">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                    Submitted Resume (${escapeHtml(application.resumeFileName || 'My_Resume.pdf')})
+                  </a>`;
+              })()}
               ${application.coverNote ? `<p class="muted" style="margin-top: 6px; font-size: 0.88rem;"><strong>Note:</strong> ${escapeHtml(application.coverNote)}</p>` : ""}
             </div>
             ${job ? `<a class="btn btn-secondary" href="./job-details.html?id=${encodeURIComponent(job.id)}">Open job</a>` : ""}

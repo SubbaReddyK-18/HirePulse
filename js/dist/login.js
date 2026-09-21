@@ -99,8 +99,6 @@
       return `
       ${navLink("./index.html", "Home", currentPage)}
       ${navLink("./jobs.html", "Jobs", currentPage)}
-      ${navLink("./login.html", "Login", currentPage)}
-      ${navLink("./register.html", "Register", currentPage)}
     `;
     }
     if (user.role === "candidate") {
@@ -108,7 +106,6 @@
       ${navLink("./index.html", "Home", currentPage)}
       ${navLink("./jobs.html", "Jobs", currentPage)}
       ${navLink("./candidate-dashboard.html", "Dashboard", currentPage)}
-      ${navLink("./my-applications.html", "My Applications", currentPage)}
     `;
     }
     return `

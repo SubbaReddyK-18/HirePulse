@@ -11,8 +11,6 @@ function buildNavLinks(user, currentPage) {
     return `
       ${navLink("./index.html", "Home", currentPage)}
       ${navLink("./jobs.html", "Jobs", currentPage)}
-      ${navLink("./login.html", "Login", currentPage)}
-      ${navLink("./register.html", "Register", currentPage)}
     `;
   }
 
@@ -21,7 +19,6 @@ function buildNavLinks(user, currentPage) {
       ${navLink("./index.html", "Home", currentPage)}
       ${navLink("./jobs.html", "Jobs", currentPage)}
       ${navLink("./candidate-dashboard.html", "Dashboard", currentPage)}
-      ${navLink("./my-applications.html", "My Applications", currentPage)}
     `;
   }
 

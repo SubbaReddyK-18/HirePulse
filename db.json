@@ -48,6 +48,20 @@
       "email": "meera@finovate.in",
       "password": "recruiter123",
       "role": "recruiter"
+    },
+    {
+      "name": "SUBBU",
+      "email": "vu241fa04b47@gmail.com",
+      "password": "vfstr2024",
+      "role": "candidate",
+      "id": "VL6wHF7fTy4"
+    },
+    {
+      "name": "balaram",
+      "email": "subbukatreddy81@gmail.com",
+      "password": "vfstr2024",
+      "role": "recruiter",
+      "id": "cbaXB6j8bgg"
     }
   ],
   "jobs": [
@@ -58,7 +72,13 @@
       "location": "Bengaluru",
       "salary": 950000,
       "experience": "1-3 years",
-      "skills": ["HTML", "CSS", "JavaScript", "React", "TypeScript"],
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "TypeScript"
+      ],
       "description": "Design and build fast, interactive user interfaces for our enterprise cloud platform. You will translate wireframes into high-fidelity web components, optimize asset loading, collaborate closely with UX designers, and write unit tests.",
       "postedDate": "2026-09-18",
       "recruiterId": "5"
@@ -70,7 +90,13 @@
       "location": "Hyderabad",
       "salary": 1250000,
       "experience": "1-3 years",
-      "skills": ["Java", "Spring Boot", "Microservices", "PostgreSQL", "REST APIs"],
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Microservices",
+        "PostgreSQL",
+        "REST APIs"
+      ],
       "description": "Architect scalable microservices handling high transaction throughput. Work with Kafka event streaming, optimize SQL queries, and implement robust authentication and rate limiting.",
       "postedDate": "2026-09-17",
       "recruiterId": "5"
@@ -82,7 +108,13 @@
       "location": "Remote",
       "salary": 850000,
       "experience": "1-3 years",
-      "skills": ["Figma", "Wireframing", "Prototyping", "Design Systems", "User Research"],
+      "skills": [
+        "Figma",
+        "Wireframing",
+        "Prototyping",
+        "Design Systems",
+        "User Research"
+      ],
       "description": "Create intuitive user flows, clickable prototypes, and unified design components for desktop and mobile web. Conduct customer interviews and usability reviews to refine UX.",
       "postedDate": "2026-09-16",
       "recruiterId": "5"
@@ -94,7 +126,13 @@
       "location": "Pune",
       "salary": 700000,
       "experience": "0-1 years",
-      "skills": ["AWS", "Linux", "Networking", "Bash", "Troubleshooting"],
+      "skills": [
+        "AWS",
+        "Linux",
+        "Networking",
+        "Bash",
+        "Troubleshooting"
+      ],
       "description": "Diagnose customer infrastructure tickets, manage VPC networks, deploy cloud instances, and help scale server configurations in real-time.",
       "postedDate": "2026-09-15",
       "recruiterId": "6"
@@ -106,7 +144,13 @@
       "location": "Bengaluru",
       "salary": 1450000,
       "experience": "3-5 years",
-      "skills": ["Docker", "Kubernetes", "CI/CD", "Terraform", "AWS"],
+      "skills": [
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "Terraform",
+        "AWS"
+      ],
       "description": "Build automated release pipelines, manage Kubernetes clusters, enforce zero-downtime rolling updates, and maintain cloud security baselines.",
       "postedDate": "2026-09-14",
       "recruiterId": "6"
@@ -118,7 +162,13 @@
       "location": "Mumbai",
       "salary": 950000,
       "experience": "1-3 years",
-      "skills": ["SQL", "Python", "Power BI", "Excel", "Data Modeling"],
+      "skills": [
+        "SQL",
+        "Python",
+        "Power BI",
+        "Excel",
+        "Data Modeling"
+      ],
       "description": "Analyze transaction patterns, build automated executive dashboards, define KPIs, and deliver actionable insights for fintech operations.",
       "postedDate": "2026-09-14",
       "recruiterId": "7"
@@ -130,7 +180,13 @@
       "location": "Chennai",
       "salary": 1150000,
       "experience": "1-3 years",
-      "skills": ["React", "Node.js", "Express", "MongoDB", "JavaScript"],
+      "skills": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "JavaScript"
+      ],
       "description": "Own end-to-end full stack features from MongoDB schemas and Express routes to React component state and client-side caching.",
       "postedDate": "2026-09-13",
       "recruiterId": "7"
@@ -142,7 +198,13 @@
       "location": "Hyderabad",
       "salary": 850000,
       "experience": "1-3 years",
-      "skills": ["Selenium", "Playwright", "Cypress", "API Testing", "Postman"],
+      "skills": [
+        "Selenium",
+        "Playwright",
+        "Cypress",
+        "API Testing",
+        "Postman"
+      ],
       "description": "Write automated end-to-end UI regression suites and REST API tests, integrating them into GitHub Actions CI pipelines.",
       "postedDate": "2026-09-12",
       "recruiterId": "6"
@@ -154,7 +216,13 @@
       "location": "Bengaluru",
       "salary": 1600000,
       "experience": "3-5 years",
-      "skills": ["Python", "PyTorch", "NLP", "Scikit-Learn", "FastAPI"],
+      "skills": [
+        "Python",
+        "PyTorch",
+        "NLP",
+        "Scikit-Learn",
+        "FastAPI"
+      ],
       "description": "Develop and deploy machine learning models, fine-tune transformer models for text extraction, and containerize inference pipelines.",
       "postedDate": "2026-09-11",
       "recruiterId": "5"
@@ -166,7 +234,13 @@
       "location": "Remote",
       "salary": 1200000,
       "experience": "3-5 years",
-      "skills": ["React Native", "Flutter", "TypeScript", "Redux", "Mobile UI"],
+      "skills": [
+        "React Native",
+        "Flutter",
+        "TypeScript",
+        "Redux",
+        "Mobile UI"
+      ],
       "description": "Develop high-performance cross-platform mobile apps, handle offline caching, integrate biometrics, and publish to App Store and Play Store.",
       "postedDate": "2026-09-10",
       "recruiterId": "7"
@@ -178,7 +252,13 @@
       "location": "Hyderabad",
       "salary": 650000,
       "experience": "0-1 years",
-      "skills": ["JavaScript", "HTML5", "CSS3", "Git", "OOP"],
+      "skills": [
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Git",
+        "OOP"
+      ],
       "description": "Great opportunity for freshers to kickstart software engineering careers. Work with mentors to write modular code, fix bugs, and learn agile workflows.",
       "postedDate": "2026-09-09",
       "recruiterId": "5"
@@ -190,7 +270,13 @@
       "location": "Delhi NCR",
       "salary": 1300000,
       "experience": "3-5 years",
-      "skills": ["SOC", "SIEM", "Penetration Testing", "OWASP", "Network Security"],
+      "skills": [
+        "SOC",
+        "SIEM",
+        "Penetration Testing",
+        "OWASP",
+        "Network Security"
+      ],
       "description": "Monitor system vulnerabilities, perform penetration tests, conduct incident responses, and enforce compliance with security standards.",
       "postedDate": "2026-09-08",
       "recruiterId": "6"
@@ -202,7 +288,12 @@
       "location": "Mumbai",
       "salary": 900000,
       "experience": "1-3 years",
-      "skills": ["SEO", "Content Strategy", "Google Analytics", "Email Campaigns"],
+      "skills": [
+        "SEO",
+        "Content Strategy",
+        "Google Analytics",
+        "Email Campaigns"
+      ],
       "description": "Drive user acquisition, lead product launch campaigns, produce technical case studies, and optimize conversion funnels.",
       "postedDate": "2026-09-07",
       "recruiterId": "7"
@@ -214,7 +305,13 @@
       "location": "Remote",
       "salary": 1500000,
       "experience": "3-5 years",
-      "skills": ["Prometheus", "Grafana", "Kubernetes", "Golang", "Incident Management"],
+      "skills": [
+        "Prometheus",
+        "Grafana",
+        "Kubernetes",
+        "Golang",
+        "Incident Management"
+      ],
       "description": "Ensure high availability and reliability of distributed platforms, set up SLO/SLA monitoring, and automate incident remediation.",
       "postedDate": "2026-09-06",
       "recruiterId": "6"
@@ -226,10 +323,76 @@
       "location": "Bengaluru",
       "salary": 720000,
       "experience": "0-1 years",
-      "skills": ["Python", "Django", "PostgreSQL", "REST APIs", "Git"],
+      "skills": [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "REST APIs",
+        "Git"
+      ],
       "description": "Build backend APIs using Django REST framework, write database migrations, and collaborate on microservice features.",
       "postedDate": "2026-09-05",
       "recruiterId": "5"
+    },
+    {
+      "id": "16",
+      "title": "Principal Full Stack Architect",
+      "company": "TechVerse Solutions",
+      "location": "Bengaluru",
+      "salary": 2400000,
+      "experience": "5+ years",
+      "skills": [
+        "React",
+        "Node.js",
+        "System Design",
+        "Microservices",
+        "Cloud Architecture"
+      ],
+      "description": "Lead end-to-end platform design, drive technical roadmap, mentor engineering pods, and establish high-scale architectural patterns.",
+      "postedDate": "2026-09-04",
+      "recruiterId": "5"
+    },
+    {
+      "id": "17",
+      "title": "Lead Cloud Infrastructure Architect",
+      "company": "CloudCraft Systems",
+      "location": "Remote",
+      "salary": 2600000,
+      "experience": "5+ years",
+      "skills": [
+        "AWS",
+        "Kubernetes",
+        "Terraform",
+        "Zero-Trust Security",
+        "Multi-Cloud"
+      ],
+      "description": "Architect mission-critical multi-region cloud infrastructures, oversee cost optimization, and drive enterprise cloud transformation.",
+      "postedDate": "2026-09-03",
+      "recruiterId": "6"
+    },
+    {
+      "title": "google SDE",
+      "company": "GOOGLE",
+      "location": "BENGALURU",
+      "salary": 3400000,
+      "experience": "1-3 years",
+      "skills": [
+        "JS",
+        "HTML",
+        "CSS",
+        "JAVA",
+        "C",
+        "PYTHON",
+        "DSA",
+        "OOPS",
+        "CN",
+        "OS",
+        "DAA"
+      ],
+      "description": "Join here for a vibrant life",
+      "postedDate": "2026-09-21",
+      "recruiterId": "cbaXB6j8bgg",
+      "id": "408o5N4Ksow"
     }
   ],
   "applications": [
@@ -271,6 +434,20 @@
       "coverNote": "Strong background in SQL querying and Power BI dashboarding.",
       "status": "Selected",
       "appliedDate": "2026-09-16"
+    },
+    {
+      "jobId": "408o5N4Ksow",
+      "userId": "VL6wHF7fTy4",
+      "candidateName": "SUBBU",
+      "candidateEmail": "vu241fa04b47@gmail.com",
+      "resumeFileName": "JS-Axios-Project-Ideas-with-Folder-Rules.pdf",
+      "resumeFileSize": 121770,
+      "resumeData": "stored_locally",
+      "coverNote": "",
+      "status": "Selected",
+      "appliedDate": "2026-09-21",
+      "id": "mc-304eXE5E"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

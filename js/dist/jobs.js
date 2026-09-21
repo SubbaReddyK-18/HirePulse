@@ -90,8 +90,6 @@
       return `
       ${navLink("./index.html", "Home", currentPage)}
       ${navLink("./jobs.html", "Jobs", currentPage)}
-      ${navLink("./login.html", "Login", currentPage)}
-      ${navLink("./register.html", "Register", currentPage)}
     `;
     }
     if (user.role === "candidate") {
@@ -99,7 +97,6 @@
       ${navLink("./index.html", "Home", currentPage)}
       ${navLink("./jobs.html", "Jobs", currentPage)}
       ${navLink("./candidate-dashboard.html", "Dashboard", currentPage)}
-      ${navLink("./my-applications.html", "My Applications", currentPage)}
     `;
     }
     return `
@@ -203,6 +200,12 @@
   }
 
   // js/utils.js
+  var EXPERIENCE_OPTIONS = [
+    "0-1 years",
+    "1-3 years",
+    "3-5 years",
+    "5+ years"
+  ];
   function formatSalary(value) {
     const amount = Number(value);
     if (!Number.isFinite(amount)) {
@@ -222,6 +225,21 @@
       return value.map((item) => String(item).trim()).filter(Boolean);
     }
     return String(value || "").split(",").map((item) => item.trim()).filter(Boolean);
+  }
+  function getQueryParam(name) {
+    const urlParam = new URLSearchParams(window.location.search).get(name);
+    if (urlParam) {
+      try {
+        sessionStorage.setItem("param_" + name, urlParam);
+      } catch (_) {
+      }
+      return urlParam;
+    }
+    try {
+      return sessionStorage.getItem("param_" + name) || null;
+    } catch (_) {
+      return null;
+    }
   }
   function uniqueValues(items, field) {
     return [...new Set(items.map((item) => item[field]).filter(Boolean))].sort();
@@ -335,7 +353,7 @@
       locationSelect.appendChild(option);
     });
     const experienceSelect = document.getElementById("experience-filter");
-    uniqueValues(jobs, "experience").forEach((experience) => {
+    EXPERIENCE_OPTIONS.forEach((experience) => {
       const option = document.createElement("option");
       option.value = experience;
       option.textContent = experience;
@@ -349,6 +367,10 @@
     try {
       allJobs = await getJobs();
       fillFilterOptions(allJobs);
+      const initialSearch = getQueryParam("search") || "";
+      if (initialSearch) {
+        document.getElementById("search-input").value = initialSearch;
+      }
       applyFilters();
     } catch (error) {
       renderError(list, getUserFacingError(error));

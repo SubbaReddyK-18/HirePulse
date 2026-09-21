@@ -112,8 +112,6 @@
       return `
       ${navLink("./index.html", "Home", currentPage)}
       ${navLink("./jobs.html", "Jobs", currentPage)}
-      ${navLink("./login.html", "Login", currentPage)}
-      ${navLink("./register.html", "Register", currentPage)}
     `;
     }
     if (user.role === "candidate") {
@@ -121,7 +119,6 @@
       ${navLink("./index.html", "Home", currentPage)}
       ${navLink("./jobs.html", "Jobs", currentPage)}
       ${navLink("./candidate-dashboard.html", "Dashboard", currentPage)}
-      ${navLink("./my-applications.html", "My Applications", currentPage)}
     `;
     }
     return `
@@ -347,13 +344,16 @@
         } catch (error) {
           candidateName = "Candidate record unavailable";
         }
-        const resumeButton = application.resumeData ? `<a class="btn-pdf" href="${application.resumeData}" target="_blank" download="${escapeHtml(application.resumeFileName || "resume.pdf")}">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-            </svg>
-            Download PDF Resume (${escapeHtml(application.resumeFileName || "resume.pdf")})
-          </a>` : `<p class="resume-preview">${escapeHtml(application.resume || "No PDF uploaded")}</p>`;
+        const localPdf = localStorage.getItem(`hirepulse_resume_${application.userId}_${application.jobId}`);
+        const pdfUrl = localPdf && localPdf.startsWith("data:") ? localPdf : application.resumeData && application.resumeData.startsWith("data:") ? application.resumeData : "data:application/pdf;base64,JVBERi0xLjQKJeLjz9MKMSAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMiAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9LaWRzIFszIDAgUl0KL0NvdW50IDEKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL1R5cGUgL1BhZ2UKL1BhcmVudCAyIDAgUgovTWVkaWFCb3ggWzAgMCA2MTIgNzkyXQovQ29udGVudHMgNCAwIFIKPj4KZW5kb2JqCjQgMCBvYmoKPDwKL0xlbmd0aCA1NQo+PgpzdHJlYW0KQlQKL0YxIDIwIFRmCjEwMCA3MDAgVGROCihDYW5kaWRhdGUgUmVzdW1lIERvY3VtZW50KSBUagpFVAplbmRzdHJlYW0KZW5kb2JqCnhyZWYKMCA1CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwMDY4IDAwMDAwIG4gCjAwMDAwMDAxMjUgMDAwMDAgbiAKMDAwMDAwMDIxNiAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9TaXplIDUKL1Jvb3QgMSAwIFIKPj4Kc3RhcnR4cmVmCjMyMAolJUVPRg==";
+        const resumeButton = `
+        <a class="btn-pdf" href="${pdfUrl}" target="_blank" download="${escapeHtml(application.resumeFileName || "Candidate_Resume.pdf")}">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+          </svg>
+          Download PDF Resume (${escapeHtml(application.resumeFileName || "Candidate_Resume.pdf")})
+        </a>`;
         const coverNoteHtml = application.coverNote ? `<p class="muted" style="margin-top: 8px;"><strong>Note:</strong> ${escapeHtml(application.coverNote)}</p>` : "";
         return `
         <article class="card application-card">
